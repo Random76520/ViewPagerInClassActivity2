@@ -35,6 +35,12 @@ class TextFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_text, container, false)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        view.findViewById<TextView>(R.id.textView).text = param1
+    }
+
     companion object {
         /**
          * Use this factory method to create a new instance of
